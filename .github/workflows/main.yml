@@ -14,7 +14,7 @@ jobs:
       - name: Test
         run: mvn test
         
-  build:
+  verify:
     name: Checkstye
     runs-on: ubuntu-latest
 
