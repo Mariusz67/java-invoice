@@ -12,6 +12,7 @@ jobs:
           java-version: '15'
           distribution: 'adopt'
       - name: Test
-        run: mvn checkstyle:check
+        run: mvn test
+        
     
 
