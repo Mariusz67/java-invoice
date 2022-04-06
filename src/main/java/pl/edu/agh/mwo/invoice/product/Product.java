@@ -2,7 +2,7 @@ package pl.edu.agh.mwo.invoice.product;
 
 import java.math.BigDecimal;
 
-//comment
+//comment1
 
 public abstract class Product {
     private final String name;
