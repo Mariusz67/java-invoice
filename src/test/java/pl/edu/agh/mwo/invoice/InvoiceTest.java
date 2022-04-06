@@ -26,6 +26,7 @@ public class InvoiceTest {
         Assert.assertThat(BigDecimal.ZERO, Matchers.comparesEqualTo(invoice.getNetTotal()));
     }
 
+
     @Test
     public void testEmptyInvoiceHasEmptyTaxAmount() {
         Assert.assertThat(BigDecimal.ZERO, Matchers.comparesEqualTo(invoice.getTaxTotal()));
