@@ -129,6 +129,8 @@ public class InvoiceTest {
 
     @Test
     public void testInvoiceNumber(){
+        int number = 102;
+        invoice.setInvoiceNumber(number);
         Assert.assertThat(102, Matchers.comparesEqualTo(invoice.getInvoiceNumber()));
     }
 
