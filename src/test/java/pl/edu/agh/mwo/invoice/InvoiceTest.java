@@ -126,6 +126,12 @@ public class InvoiceTest {
     public void testAddingNullProduct() {
         invoice.addProduct(null);
     }
+
+    @Test
+    public void testInvoiceNumber(){
+        Assert.assertThat(102, Matchers.comparesEqualTo(invoice.getInvoiceNumber()));
+    }
+
 }
 
 //
