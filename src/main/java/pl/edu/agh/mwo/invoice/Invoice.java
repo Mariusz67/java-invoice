@@ -10,6 +10,16 @@ public class Invoice {
     private static int nextNumber = 0;
     private final int number = ++nextNumber;
 
+    private int invoiceNumber;
+
+    public int getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
     public void addProduct(Product product) {
         addProduct(product, 1);
     }
