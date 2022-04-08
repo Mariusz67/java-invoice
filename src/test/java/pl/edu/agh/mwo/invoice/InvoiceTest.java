@@ -151,5 +151,13 @@ public class InvoiceTest {
         Assert.assertThat(number1, Matchers.lessThan(number2));
     }
 
+    @Test
+    public void testAddTheSameProductTwice() {
+        DairyProduct kefir = new DairyProduct("Kefir", new BigDecimal("100"));
+        invoice.addProduct(kefir, 2);
+        invoice.addProduct(kefir, 3);
+        Assert.assertThat(5, Matchers.comparesEqualTo(invoice.getTotalProductQuantity(kefir)));
+    }
+
 }
 //test1

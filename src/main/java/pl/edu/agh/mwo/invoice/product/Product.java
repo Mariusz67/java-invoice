@@ -2,9 +2,6 @@ package pl.edu.agh.mwo.invoice.product;
 
 import java.math.BigDecimal;
 
-//comment1
-//test3
-
 public abstract class Product {
     private final String name;
 

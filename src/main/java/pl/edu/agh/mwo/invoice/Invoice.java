@@ -15,11 +15,23 @@ public class Invoice {
     }
 
     public void addProduct(Product product, Integer quantity) {
+        Integer originalQuantityOfProduct = 0;
         if (product == null || quantity <= 0) {
             throw new IllegalArgumentException();
         }
-        products.put(product, quantity);
+        if (products.containsKey(product)) {
+            originalQuantityOfProduct = products.get(product);
+            products.put(product, quantity+originalQuantityOfProduct);
+        }
+        else {
+            products.put(product, quantity);
+        }
     }
+
+    public int getTotalProductQuantity(Product product) {
+        return products.get(product);
+    }
+
 
     public BigDecimal getNetTotal() {
         BigDecimal totalNet = BigDecimal.ZERO;
