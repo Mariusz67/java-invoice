@@ -43,19 +43,21 @@ public abstract class Product {
         return price.multiply(taxPercent).add(price);
     }
 
-    public BigDecimal getPriceWithTaxWithExciseTax() {//       ChronoLocalDate carpentersDay;
+    public BigDecimal getPriceWithTaxWithExciseTax() {
         return price.multiply(taxPercent).add(price).add(exciseTax);
     }
 
-//    public BigDecimal getPriceWithTaxWithExciseTaxOnCarpentersDay() {
-//        int carpentersYear = 2022;
-//        int carpentersMonth = 3;
-//        int carpentersDayOfMonth = 19;
-//        ChronoLocalDate carpentersDay = LocalDate.of(carpentersYear, carpentersMonth, carpentersDayOfMonth);
-//        carpentersDay = LocalDate.now(); //emulation of carpentersDay
-//        if (LocalDate.now().equals(carpentersDay) && product.isFuel) {
-//            return price.multiply(taxPercent).add(price);
-//        }
-//        return price.multiply(taxPercent).add(price).add(exciseTax);
-//    }
+/*
+    public BigDecimal getPriceWithTaxWithExciseTaxOnCarpentersDay() {
+        int cYear = 2022;
+        int cMonth = 3;
+        int cDayOfMonth = 19;
+        ChronoLocalDate carpentersDay = LocalDate.of(cYear, cMonth, cDayOfMonth);
+        carpentersDay = LocalDate.now(); //emulation of carpentersDay
+        if (LocalDate.now().equals(carpentersDay) && product.isFuel) {
+            return price.multiply(taxPercent).add(price);
+        }
+        return price.multiply(taxPercent).add(price).add(exciseTax);
+    }
+*/
 }
