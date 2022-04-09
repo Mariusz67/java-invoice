@@ -14,6 +14,8 @@ public abstract class Product {
 
     private final BigDecimal exciseTax = new BigDecimal("5.56");
 
+
+
     protected Product(String name, BigDecimal price, BigDecimal tax) {
         if (name == null || name.equals("") || price == null || tax == null
                 || tax.compareTo(new BigDecimal(0)) < 0
@@ -41,12 +43,19 @@ public abstract class Product {
         return price.multiply(taxPercent).add(price);
     }
 
-    public BigDecimal getPriceWithTaxWithExciseTax() {
-        ChronoLocalDate carpentersDay;
-        carpentersDay = LocalDate.of(2022, 3, 19);
-        if(LocalDate.now().equals(carpentersDay)) {
-            return price.multiply(taxPercent).add(price);
-        }
+    public BigDecimal getPriceWithTaxWithExciseTax() {//       ChronoLocalDate carpentersDay;
         return price.multiply(taxPercent).add(price).add(exciseTax);
     }
+
+//    public BigDecimal getPriceWithTaxWithExciseTaxOnCarpentersDay() {
+//        int carpentersYear = 2022;
+//        int carpentersMonth = 3;
+//        int carpentersDayOfMonth = 19;
+//        ChronoLocalDate carpentersDay = LocalDate.of(carpentersYear, carpentersMonth, carpentersDayOfMonth);
+//        carpentersDay = LocalDate.now(); //emulation of carpentersDay
+//        if (LocalDate.now().equals(carpentersDay) && product.isFuel) {
+//            return price.multiply(taxPercent).add(price);
+//        }
+//        return price.multiply(taxPercent).add(price).add(exciseTax);
+//    }
 }

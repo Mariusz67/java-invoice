@@ -6,7 +6,11 @@ import java.math.BigDecimal;
 
 public class FuelCanister extends OtherProduct {
 
-    public FuelCanister(String name, BigDecimal price) {
+        public static boolean isFuel;
+
+        public FuelCanister(String name, BigDecimal price, Boolean isFuel) {
         super(name, price);
+        this.isFuel = isFuel;
+
     }
 }
