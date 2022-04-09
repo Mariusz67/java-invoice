@@ -1,5 +1,6 @@
 package pl.edu.agh.mwo.invoice;
 
+import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,6 +57,16 @@ public class Invoice {
 
     public int getNumber() {
         return number;
+    }
+
+    public void printProducts() {
+        for (Product p : products.keySet()) {
+            System.out.println(p.getName() + " ; " + p.getPrice() + " ; " + products.get(p));
+        }
+    }
+
+    public int numberOfLines() {
+        return products.size();
     }
 }
 //test1
