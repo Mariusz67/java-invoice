@@ -21,9 +21,8 @@ public class Invoice {
         }
         if (products.containsKey(product)) {
             originalQuantityOfProduct = products.get(product);
-            products.put(product, quantity+originalQuantityOfProduct);
-        }
-        else {
+            products.put(product, quantity + originalQuantityOfProduct);
+        } else {
             products.put(product, quantity);
         }
     }
