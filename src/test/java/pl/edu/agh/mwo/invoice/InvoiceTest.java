@@ -172,5 +172,11 @@ public class InvoiceTest {
     }
 
 
+    @Test
+    public void testInvoiceBottleOfWine() {
+        invoice.addProduct(new BottleOfWine("Chablis", new BigDecimal("80")), 2);
+        Assert.assertThat(new BigDecimal("207.92"), Matchers.comparesEqualTo(invoice.getGrossTotalWithExciseTax()));
+    }
+
 }
 

@@ -68,5 +68,14 @@ public class Invoice {
     public int numberOfLines() {
         return products.size();
     }
+
+    public BigDecimal getGrossTotalWithExciseTax() {
+        BigDecimal totalGross = BigDecimal.ZERO;
+        for (Product product : products.keySet()) {
+            BigDecimal quantity = new BigDecimal(products.get(product));
+            totalGross = totalGross.add(product.getPriceWithTaxWithExciseTax().multiply(quantity));
+        }
+        return totalGross;
+    }
 }
 
