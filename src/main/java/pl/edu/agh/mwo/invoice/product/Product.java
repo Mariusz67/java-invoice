@@ -43,7 +43,7 @@ public abstract class Product {
 
     public BigDecimal getPriceWithTaxWithExciseTax() {
         ChronoLocalDate carpentersDay;
-        carpentersDay = LocalDate.of(2022,3,19);
+        carpentersDay = LocalDate.of(2022, 3, 19);
         if(LocalDate.now().equals(carpentersDay)) {
             return price.multiply(taxPercent).add(price);
         }
