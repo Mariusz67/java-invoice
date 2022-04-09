@@ -1,6 +1,8 @@
 package pl.edu.agh.mwo.invoice.product;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.Date;
 
 public abstract class Product {
     private final String name;
@@ -39,6 +41,9 @@ public abstract class Product {
     }
 
     public BigDecimal getPriceWithTaxWithExciseTax() {
+        if(LocalDate.now().equals(LocalDate.of(2022,3,19))) {
+            return price.multiply(taxPercent).add(price);
+        }
         return price.multiply(taxPercent).add(price).add(exciseTax);
     }
 }
