@@ -47,7 +47,7 @@ public abstract class Product {
         return price.multiply(taxPercent).add(price).add(exciseTax);
     }
 
-/*
+    /*
     public BigDecimal getPriceWithTaxWithExciseTaxOnCarpentersDay() {
         int cYear = 2022;
         int cMonth = 3;
@@ -59,5 +59,5 @@ public abstract class Product {
         }
         return price.multiply(taxPercent).add(price).add(exciseTax);
     }
-*/
+    */
 }
